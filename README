@@ -1,0 +1,17 @@
+trakt/flix 1.0
+==============
+
+Copy movies you've watched on Netflix into your Trakt library.
+
+
+== Prerequisites
+
+Dependencies include gem 'oauth' for authentication with the Netflix API.
+
+
+== Setup
+
+Sessions are stored in a local sqlite3 database. To setup this database, run:
+$ rake db:sessions:create
+$ rake db:migrate
+

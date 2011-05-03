@@ -1,0 +1,26 @@
+	<div id="netflix-select-container" class="main-container">
+		<h2>Select Movies</h2>
+		<p class="subtitle">Choose the movies that we've discovered that you watched so that we can notify Trakt.</p>
+		<div class="main-body">
+<% form_tag(:action => 'submit') do %>
+			<ul>
+<%  @rental_history_items.each do |item| %>
+				<li>
+					<%= check_box_tag 'movie[]', item.elements["id"].text.split('/').last %>
+					<p class="movie-title"><%= item.elements["title"].attributes["short"] %>&nbsp;<span class="movie-year">(<%= item.elements["release_year"].text %>)</span></p>
+					<%= image_tag item.elements["box_art"].attributes["large"], :width => 110, :height => 150 %>
+				</li>
+<%  end %>
+			</ul>
+			<div id="trakt-login">
+				<h3>Login to Trakt</h3>
+				<p class="subtitle">Enter your credentials for Trakt so that we can import these selected movies into your library. <strong>Your credentials will not be stored or shared at any time.</strong></p>
+				<%= label_tag(:trakt_username, "Username") %>
+				<%= text_field_tag(:trakt_username) %>
+				<%= label_tag(:trakt_password, "Password") %>
+				<%= password_field_tag(:trakt_password) %>
+				<%= submit_tag "Submit to Trakt" %>
+			</div>
+<% end %>
+		</div>
+	</div>

@@ -1,0 +1,22 @@
+	<div id="netflix-success-container" class="main-container">
+		<h2>All Done!</h2>
+		<p class="subtitle">We received <%= @trakt_out['movies'].length %> movie(s) for import into your Trakt library.</p>
+		<div class="main-body">
+<% if @trakt_in['status'] == 'success' %>
+			<p class="summary">
+				You selected <%= @trakt_out['movies'].length %> movies for import into your Trakt library.
+			</p>
+			<ul>
+<%  @trakt_out['movies'].each do |item| %>
+				<li><%= item['title'] %>&nbsp;<span class="movie-year">(<%= item['year'] %>)</li>
+<%  end %>
+			</ul>
+			<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.traktflix.com" data-text="I just added <%= @trakt_out['movies'].length %> movies from my @netflix history to my @trakt library using Traktflix!" data-count="none">Tweet</a>
+			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<% elsif @trakt_in['status'] == 'failure' && @trakt_in['error'] == 'failed authentication' %>
+			<p class="error">Unfortunately, the Trakt credentials you provided were incorrect.</p>
+<% else %>
+			<p class="error">Unfortunately, something went wrong while trying to finish the job.</p>
+<% end %>
+		</div>
+	</div>

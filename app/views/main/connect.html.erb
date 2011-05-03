@@ -1,0 +1,15 @@
+	<div id="step-connect" class="step<%= " active" if params[:action] == "index" %><%= " complete" if params[:action] == "select" or params[:action] == "submit" %>">
+		<div class="heading">
+			<div class="step-number">1</div>
+			<span class="step-name">Connect to Netflix</span>
+			<p class="step-desc">Login to Netflix and allow <span class="app-name">trakt/flix</span> access to rental information so we can find the movies you've watched.</p>
+		</div>
+		<div class="step-body">
+<% if params[:action] == "index" %>
+			<a href="/connect" class="netflix-connect">Connect to Netflix</a>
+<% else %>
+			<span class="netflix-connect">Already connected to Netflix</a>
+<% end %>
+		</div>
+	</div>
+

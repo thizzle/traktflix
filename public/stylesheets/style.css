@@ -1,0 +1,212 @@
+body, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+body {
+  background-color: #555;
+
+  font-family: Helvetica, Arial;
+  color: #eee;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #0099CC;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00BFFF;
+}
+
+h1 {
+  height: 32px;
+  margin: 0;
+  padding: 8px 4px;
+
+  border-bottom: #333 1px solid;
+  background: #f85032; /* old browsers */
+  background: -moz-linear-gradient(top, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f85032), color-stop(50%,#f16f5c), color-stop(51%,#f6290c), color-stop(71%,#f02f17), color-stop(100%,#e73827)); /* webkit */
+
+  font-family: 'League Ghotic Extended';
+  line-height: 140%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  display: inline;
+
+  font-size: 32px;
+  color: #ffba4f;
+  letter-spacing: 1px;
+}
+
+p.subtitle {
+  color: #eee;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p.error {
+  padding-left: 8px;
+  border-left: 2px solid #ff0f00;
+
+  color: #ff0f00;
+  font-style: italic;
+}
+
+input[type=text], input[type=password] {
+  -webkit-box-shadow: inset 2px 2px 5px #333333;
+  -moz-box-shadow: inset 2px 2px 5px #333333;
+  box-shadow: inset 2px 2px 5px #333333;
+}
+
+#main {
+  padding: 16px;
+
+  border-bottom: 1px solid #000;
+  background-color: #FFBA4F;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 512, from(#70B7DB), to(#3399CC));
+  background-image: -moz-radial-gradient(circle, #70B7DB, #3399CC);
+
+  font-size: 12px;
+  color: #333;
+}
+
+.main-container {
+  width: 960px;
+  margin: 64px auto;
+}
+
+.main-body {
+  margin-top: 20px;
+}
+
+a.netflix-connect {
+  width: 128px;
+  height: 18px;
+  display: block;
+  padding: 8px 0 4px 40px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: 1px 1px 5px #000;
+  -moz-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 5px #000;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #ff0f00 url(/images/netflix_icon.png) 12px 3px no-repeat;
+}
+
+#netflix-connect-container a.netflix-connect:hover {
+  -webkit-box-shadow: 1px 1px 5px #555;
+  -moz-box-shadow: 0px 0px 5px #555;
+  box-shadow: 1px 1px 5px #555;
+}
+
+#netflix-select-container ul li {
+  width: 125px;
+  height: 200px;
+  padding: 12px;
+  margin: 4px;
+  float: left;
+
+  cursor: pointer;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: #0099CC 2px solid;
+  background-color: #E5F3FF;
+}
+
+#netflix-select-container ul li:hover {
+  background-color: #FFE0B3;
+  border: #ff9b00 2px solid;
+}
+
+#netflix-select-container ul li.selected {
+  background-color: #ff9b00;
+}
+
+#netflix-select-container ul li.last {
+  clear: left;
+}
+
+#netflix-select-container ul li input[type=checkbox] {
+  float: left;
+}
+
+#netflix-select-container ul li {
+  margin-left: 8px;
+
+  font-weight: bold;
+}
+
+#netflix-select-container ul li .movie-year {
+  font-weight: normal;
+}
+
+#netflix-select-container #trakt-login {
+  clear: left;
+}
+
+#netflix-select-container #trakt-login h3 {
+  padding-top: 32px;
+  margin-bottom: 4px;
+
+  color: #ffba4f;
+  font-size: 20px;
+}
+
+#netflix-select-container #trakt-login h3 + .subtitle {
+  font-size: 12px;
+  margin-bottom: 32px;
+}
+
+#netflix-success-container ul li {
+  margin-left: 8px;
+
+  font-weight: bold;
+}
+
+#netflix-success-container ul li .movie-year {
+  font-weight: normal;
+}
+
+#netflix-success-container .main-body > ul {
+  margin-bottom: 10px;
+}
+
+#footer {
+  padding-top: 20px;
+
+  background: #000; /* old browsers */
+  background: -moz-linear-gradient(top, #000 0%, #555 8%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000), color-stop(8%,#555)); /* webkit */
+
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer p {
+  margin: 20px 0;
+}
+
+#footer p img {
+  vertical-align: middle;
+}
+

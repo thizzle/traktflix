@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>trakt/flix</title>
+  <%= stylesheet_link_tag "http://kernest.com/fonts/league-ghotic-extended.css" %>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js" %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.5.1.min.js" %>
+  <%= javascript_include_tag "script" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<h1>trakt/flix</h1>
+
+<div id="main">
+<%= yield %>
+</div>
+
+<div id="footer">
+	<p><a href="http://github.com/thizzle/traktflix"><img src="/images/github.png" width="32" height="32" border="0" alt="GitHub" /></a> trakt/flix is an open-source project hosted at <a href="http://github.com/thizzle/traktflix">GitHub</a>.</p>
+	<p class="copyright"><a href="http://www.tharsan.com">Tharsan Bhuvanendran</a> &copy; 2011</p>
+</div>
+
+</body>
+</html>

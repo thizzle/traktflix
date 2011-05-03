@@ -1,0 +1,7 @@
+netflix:
+  application_key: [app_key]
+  shared_secret: [shared_secret]
+
+trakt:
+  api_key: [api_key]
+
